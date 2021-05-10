@@ -1,0 +1,28 @@
+{
+  "name": "tilda-quiz-e2e",
+  "version": "1.0.0",
+  "description": "Cypress Test suite for Tilda Quiz app",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErnstHB/tilda-quiz-e2e.git"
+  },
+  "keywords": [
+    "cypress",
+    "e2e",
+    "tilda",
+    "quiz"
+  ],
+  "author": "Ernesto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErnstHB/tilda-quiz-e2e/issues"
+  },
+  "homepage": "https://github.com/ErnstHB/tilda-quiz-e2e#readme",
+  "devDependencies": {
+    "cypress": "^7.2.0"
+  }
+}
