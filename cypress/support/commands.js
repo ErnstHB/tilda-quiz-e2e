@@ -1,3 +1,4 @@
+import {createQuiz, deleteQuiz} from '../queries';
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -23,3 +24,17 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// createQuiz function
+Cypress.Commands.add('createQuiz', (quizName, quizQuestions) =>
+  createQuiz(quizName, quizQuestions).then((response) => 
+    Cypress._.get(response, 'body.data.insert_quizzes_one.id')
+  )
+);
+
+// deleteQuiz function
+Cypress.Commands.add('deleteQuiz', (quizID) =>
+  deleteQuiz(quizID).then((response) => 
+    Cypress._.get(response, 'body.data.delete_quizzes_by_pk.id')
+  )
+);
